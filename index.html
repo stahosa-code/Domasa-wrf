@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="pl"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Czorsztyn – WRF 1,5 km</title>
+<style>
+:root{--blue:#0b65a8;--bg:#edf2f6;--text:#17202a;--calm:#eef2f5;--light:#e5f5ef;--good:#dff4cf;--strong:#fff0b8;--vstrong:#ffd79a;--hard:#ffb4ad}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--text)}
+header{background:linear-gradient(135deg,#074b7d,var(--blue));color:#fff;padding:20px 14px}.inner,main{max-width:920px;margin:auto}
+h1{margin:0;font-size:27px}header p{margin:6px 0 0}main{padding:10px}
+.hero,.card{background:#fff;border-radius:16px;margin-bottom:14px;box-shadow:0 2px 12px #0001;overflow:hidden}
+.hero{padding:14px}.heroGrid,.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px}
+.heroGrid div,.stats div{padding:10px;background:#f8fafb}span,small,.deg{color:#61707c}.heroGrid span,.stats span{display:block;font-size:11px;margin-bottom:3px}
+.meta{font-size:13px;color:#61707c;line-height:1.55;margin-top:10px}.legend{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.legend i{font-style:normal;padding:5px 8px;border-radius:999px;font-size:12px;font-weight:700}
+.dayhead{padding:14px;border-bottom:1px solid #e5e9ed}.dayhead h2{margin:0;font-size:23px}.wrap{overflow-x:auto}table{width:100%;min-width:650px;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th{background:var(--blue);color:#fff;padding:10px 8px;text-align:right}th:first-child,td.time{text-align:left}td{padding:10px 8px;text-align:right;border-bottom:1px solid #0001}
+td b{font-size:17px}.delta{display:inline-block;margin-left:5px;padding:2px 5px;background:#fff9;border-radius:999px;font-size:11px;font-weight:800;color:#4c5964}
+.calm{background:var(--calm)}.light{background:var(--light)}.good{background:var(--good)}.strong{background:var(--strong)}.vstrong{background:var(--vstrong)}.hard{background:var(--hard)}
+.g-neutral{background:#f3f5f7!important}
+.g-light{background:#dff4cf!important}
+.g-strong{background:#ffe68a!important}
+.g-vstrong{background:#ffbd66!important}
+.g-hard{background:#ff7f73!important}
+.g-extreme{background:#b83232!important;color:#fff!important}
+.g-extreme small,.g-extreme .delta{color:#fff!important}
+.g-extreme .delta{background:rgba(255,255,255,.22)!important}
+.temp{font-variant-numeric:tabular-nums}
+.t-vcold{background:#9dc9ff!important}
+.t-cold{background:#b9dcff!important}
+.t-cool{background:#bfeee9!important}
+.t-mild{background:#d8f2cf!important}
+.t-warm{background:#ffe89a!important}
+.t-hot{background:#ffc36d!important}
+.t-vhot{background:#ff8b7f!important}
+footer{text-align:center;color:#61707c;font-size:12px;padding:8px 12px 24px}
+@media(max-width:680px){.heroGrid,.stats{grid-template-columns:1fr}main{padding:7px}}
+</style></head><body>
+<header><div class="inner"><h1>🌬️ Czorsztyn – WRF 1,5 km</h1><p>Jezioro Czorsztyńskie · wysokość Maniów</p></div></header>
+<main>
+<div class="hero">
+<div class="heroGrid">
+<div><span>Najsilniejszy wiatr</span><b>13.9 kn · 00:00</b></div>
+<div><span>Najsilniejszy poryw</span><b>19.6 kn · 00:00</b></div>
+<div><span>Aktualizacja</span><b>10:31</b></div>
+</div>
+<div class="legend"><i style="background:var(--calm)">wiatr 0–8</i><i style="background:var(--light)">8–12</i><i style="background:var(--good)">12–16</i><i style="background:var(--strong)">16–20</i><i style="background:var(--vstrong)">20–24</i><i style="background:var(--hard)">24+ kn</i></div>
+<div class="legend"><i style="background:#f3f5f7">poryw &lt;12</i><i style="background:#dff4cf">12–16</i><i style="background:#ffe68a">16–20</i><i style="background:#ffbd66">20–24</i><i style="background:#ff7f73">24–28</i><i style="background:#b83232;color:#fff">28+ kn</i></div>
+<div class="legend"><i style="background:#9dc9ff">&lt;5°C</i><i style="background:#b9dcff">5–10°C</i><i style="background:#bfeee9">10–15°C</i><i style="background:#d8f2cf">15–20°C</i><i style="background:#ffe89a">20–25°C</i><i style="background:#ffc36d">25–30°C</i><i style="background:#ff8b7f">30+°C</i></div>
+<div class="meta"><b>Model:</b> HungaroMet WRF · przebieg 20.08.2026 02:00<br>
+<b>Punkt docelowy:</b> 49.4495°N, 20.2520°E<br>
+<b>Punkt siatki:</b> 49.4518°N, 20.2454°E</div>
+</div>
+
+<section class="card">
+<div class="dayhead"><h2>Dzisiaj</h2><div>20.08.2026</div></div>
+<div class="stats">
+<div><span>Średnio</span><b>6.5 kn</b></div>
+<div><span>Maks. wiatr</span><b>11.9 kn · 15:00</b></div>
+<div><span>Maks. poryw</span><b>18.0 kn · 15:00</b></div>
+</div>
+<div class="wrap"><table><thead><tr><th>Godz.</th><th>Wiatr</th><th>Porywy</th><th>Temp.</th><th>Kierunek</th></tr></thead>
+<tbody>
+<tr class="calm">
+<td class="time">10:00</td>
+<td><b>5.8</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>10.0</b> <small>kn</small><span class="delta">+4.2</span></td>
+<td class="temp t-hot"><b>25.7</b> <small>°C</small></td>
+<td><b>W</b> <span class="deg">270°</span></td>
+</tr>
+<tr class="calm">
+<td class="time">11:00</td>
+<td><b>2.3</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>7.7</b> <small>kn</small><span class="delta">+5.4</span></td>
+<td class="temp t-hot"><b>27.2</b> <small>°C</small></td>
+<td><b>SW</b> <span class="deg">225°</span></td>
+</tr>
+<tr class="calm">
+<td class="time">12:00</td>
+<td><b>1.2</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>7.7</b> <small>kn</small><span class="delta">+6.5</span></td>
+<td class="temp t-hot"><b>28.2</b> <small>°C</small></td>
+<td><b>WSW</b> <span class="deg">257°</span></td>
+</tr>
+<tr class="light">
+<td class="time">13:00</td>
+<td><b>11.1</b> <small>kn</small></td>
+<td class="gust g-light"><b>13.2</b> <small>kn</small><span class="delta">+2.1</span></td>
+<td class="temp t-hot"><b>28.5</b> <small>°C</small></td>
+<td><b>W</b> <span class="deg">276°</span></td>
+</tr>
+<tr class="light">
+<td class="time">14:00</td>
+<td><b>11.3</b> <small>kn</small></td>
+<td class="gust g-strong"><b>16.0</b> <small>kn</small><span class="delta">+4.7</span></td>
+<td class="temp t-hot"><b>28.5</b> <small>°C</small></td>
+<td><b>W</b> <span class="deg">273°</span></td>
+</tr>
+<tr class="light">
+<td class="time">15:00</td>
+<td><b>11.9</b> <small>kn</small></td>
+<td class="gust g-strong"><b>18.0</b> <small>kn</small><span class="delta">+6.1</span></td>
+<td class="temp t-hot"><b>28.7</b> <small>°C</small></td>
+<td><b>W</b> <span class="deg">267°</span></td>
+</tr>
+<tr class="light">
+<td class="time">16:00</td>
+<td><b>10.3</b> <small>kn</small></td>
+<td class="gust g-light"><b>15.5</b> <small>kn</small><span class="delta">+5.2</span></td>
+<td class="temp t-hot"><b>28.5</b> <small>°C</small></td>
+<td><b>W</b> <span class="deg">271°</span></td>
+</tr>
+<tr class="light">
+<td class="time">17:00</td>
+<td><b>10.7</b> <small>kn</small></td>
+<td class="gust g-light"><b>15.5</b> <small>kn</small><span class="delta">+4.9</span></td>
+<td class="temp t-hot"><b>27.9</b> <small>°C</small></td>
+<td><b>W</b> <span class="deg">273°</span></td>
+</tr>
+<tr class="calm">
+<td class="time">18:00</td>
+<td><b>7.3</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>10.1</b> <small>kn</small><span class="delta">+2.8</span></td>
+<td class="temp t-hot"><b>26.4</b> <small>°C</small></td>
+<td><b>WNW</b> <span class="deg">284°</span></td>
+</tr>
+<tr class="calm">
+<td class="time">19:00</td>
+<td><b>5.5</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>7.0</b> <small>kn</small><span class="delta">+1.5</span></td>
+<td class="temp t-warm"><b>23.6</b> <small>°C</small></td>
+<td><b>NNW</b> <span class="deg">341°</span></td>
+</tr>
+<tr class="calm">
+<td class="time">20:00</td>
+<td><b>3.4</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>4.2</b> <small>kn</small><span class="delta">+0.8</span></td>
+<td class="temp t-warm"><b>23.2</b> <small>°C</small></td>
+<td><b>N</b> <span class="deg">6°</span></td>
+</tr>
+<tr class="calm">
+<td class="time">21:00</td>
+<td><b>2.0</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>2.0</b> <small>kn</small><span class="delta">+0.0</span></td>
+<td class="temp t-warm"><b>23.3</b> <small>°C</small></td>
+<td><b>NNE</b> <span class="deg">34°</span></td>
+</tr>
+<tr class="calm">
+<td class="time">22:00</td>
+<td><b>4.3</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>5.4</b> <small>kn</small><span class="delta">+1.1</span></td>
+<td class="temp t-warm"><b>22.1</b> <small>°C</small></td>
+<td><b>ENE</b> <span class="deg">74°</span></td>
+</tr>
+<tr class="calm">
+<td class="time">23:00</td>
+<td><b>3.7</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>4.6</b> <small>kn</small><span class="delta">+0.9</span></td>
+<td class="temp t-warm"><b>22.4</b> <small>°C</small></td>
+<td><b>NE</b> <span class="deg">38°</span></td>
+</tr></tbody></table></div>
+</section>
+<section class="card">
+<div class="dayhead"><h2>Jutro</h2><div>21.08.2026</div></div>
+<div class="stats">
+<div><span>Średnio</span><b>4.0 kn</b></div>
+<div><span>Maks. wiatr</span><b>13.9 kn · 00:00</b></div>
+<div><span>Maks. poryw</span><b>19.6 kn · 00:00</b></div>
+</div>
+<div class="wrap"><table><thead><tr><th>Godz.</th><th>Wiatr</th><th>Porywy</th><th>Temp.</th><th>Kierunek</th></tr></thead>
+<tbody>
+<tr class="good">
+<td class="time">00:00</td>
+<td><b>13.9</b> <small>kn</small></td>
+<td class="gust g-strong"><b>19.6</b> <small>kn</small><span class="delta">+5.7</span></td>
+<td class="temp t-mild"><b>19.1</b> <small>°C</small></td>
+<td><b>W</b> <span class="deg">278°</span></td>
+</tr>
+<tr class="light">
+<td class="time">01:00</td>
+<td><b>9.4</b> <small>kn</small></td>
+<td class="gust g-light"><b>13.6</b> <small>kn</small><span class="delta">+4.2</span></td>
+<td class="temp t-mild"><b>17.9</b> <small>°C</small></td>
+<td><b>WNW</b> <span class="deg">282°</span></td>
+</tr>
+<tr class="calm">
+<td class="time">02:00</td>
+<td><b>5.6</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>7.7</b> <small>kn</small><span class="delta">+2.1</span></td>
+<td class="temp t-mild"><b>17.5</b> <small>°C</small></td>
+<td><b>ESE</b> <span class="deg">101°</span></td>
+</tr>
+<tr class="calm">
+<td class="time">03:00</td>
+<td><b>6.8</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>9.4</b> <small>kn</small><span class="delta">+2.6</span></td>
+<td class="temp t-mild"><b>16.9</b> <small>°C</small></td>
+<td><b>E</b> <span class="deg">88°</span></td>
+</tr>
+<tr class="calm">
+<td class="time">04:00</td>
+<td><b>2.2</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>2.9</b> <small>kn</small><span class="delta">+0.7</span></td>
+<td class="temp t-mild"><b>18.1</b> <small>°C</small></td>
+<td><b>NE</b> <span class="deg">37°</span></td>
+</tr>
+<tr class="calm">
+<td class="time">05:00</td>
+<td><b>4.4</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>5.9</b> <small>kn</small><span class="delta">+1.5</span></td>
+<td class="temp t-mild"><b>16.5</b> <small>°C</small></td>
+<td><b>WNW</b> <span class="deg">295°</span></td>
+</tr>
+<tr class="calm">
+<td class="time">06:00</td>
+<td><b>2.4</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>3.2</b> <small>kn</small><span class="delta">+0.8</span></td>
+<td class="temp t-mild"><b>16.5</b> <small>°C</small></td>
+<td><b>NW</b> <span class="deg">319°</span></td>
+</tr>
+<tr class="calm">
+<td class="time">07:00</td>
+<td><b>1.7</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>3.5</b> <small>kn</small><span class="delta">+1.8</span></td>
+<td class="temp t-mild"><b>17.6</b> <small>°C</small></td>
+<td><b>WSW</b> <span class="deg">252°</span></td>
+</tr>
+<tr class="calm">
+<td class="time">08:00</td>
+<td><b>2.0</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>4.9</b> <small>kn</small><span class="delta">+2.9</span></td>
+<td class="temp t-mild"><b>18.9</b> <small>°C</small></td>
+<td><b>W</b> <span class="deg">270°</span></td>
+</tr>
+<tr class="calm">
+<td class="time">09:00</td>
+<td><b>0.2</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>0.9</b> <small>kn</small><span class="delta">+0.7</span></td>
+<td class="temp t-mild"><b>19.2</b> <small>°C</small></td>
+<td><b>E</b> <span class="deg">81°</span></td>
+</tr>
+<tr class="calm">
+<td class="time">10:00</td>
+<td><b>0.8</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>3.3</b> <small>kn</small><span class="delta">+2.5</span></td>
+<td class="temp t-warm"><b>20.3</b> <small>°C</small></td>
+<td><b>S</b> <span class="deg">178°</span></td>
+</tr>
+<tr class="calm">
+<td class="time">11:00</td>
+<td><b>0.5</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>3.9</b> <small>kn</small><span class="delta">+3.4</span></td>
+<td class="temp t-warm"><b>21.4</b> <small>°C</small></td>
+<td><b>W</b> <span class="deg">265°</span></td>
+</tr>
+<tr class="calm">
+<td class="time">12:00</td>
+<td><b>2.5</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>7.0</b> <small>kn</small><span class="delta">+4.5</span></td>
+<td class="temp t-warm"><b>23.3</b> <small>°C</small></td>
+<td><b>ESE</b> <span class="deg">114°</span></td>
+</tr>
+<tr class="calm">
+<td class="time">13:00</td>
+<td><b>3.5</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>8.7</b> <small>kn</small><span class="delta">+5.1</span></td>
+<td class="temp t-hot"><b>25.1</b> <small>°C</small></td>
+<td><b>ESE</b> <span class="deg">116°</span></td>
+</tr>
+<tr class="calm">
+<td class="time">14:00</td>
+<td><b>4.0</b> <small>kn</small></td>
+<td class="gust g-neutral"><b>9.0</b> <small>kn</small><span class="delta">+5.0</span></td>
+<td class="temp t-hot"><b>25.9</b> <small>°C</small></td>
+<td><b>E</b> <span class="deg">84°</span></td>
+</tr></tbody></table></div>
+</section>
+</main><footer>Dane: HungaroMet ODP · U10/V10/WGUST/T2</footer>
+</body></html>
